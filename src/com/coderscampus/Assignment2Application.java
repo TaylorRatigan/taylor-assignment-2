@@ -13,13 +13,13 @@ public class Assignment2Application {
 		int attempt = 5;
 		
 		
+		while(attempt > 0) {
 			System.out.println("Pick a number between 1 and 100");
 			int guess = scanner.nextInt();
 			
-			
 			if(guess > 100 || guess < 1) {
 				System.out.println("Your guess is not between 1 and 100, please try again");
-				attempt--;
+				
 			}
 			else if(guess < random)  {
 				System.out.println("Pick a higher number");
@@ -29,21 +29,21 @@ public class Assignment2Application {
 				System.out.println("pick a lower number");
 				attempt--;
 			}
-			
 			else if(guess == random){
 				System.out.println("You win!");
 				scanner.close();
-				break;
+				break;	
 			}
+		}	
+			if(attempt == 0) {
+					System.out.println("You lose!");
+					System.out.println("The number to guess was: " + random);}
+			 
 		}
-		 if(attempt == 0) {
-			System.out.println("You lose!");
-			System.out.println("The number to guess was: " + random);
-		
-		 }
-	}		
-				
-}
+	}
+
+			 
+
 	
 	
 	
